@@ -95,13 +95,11 @@ h1 {
     /* For mobile phones: */
     body {
         max-width: 90%;
+        font-size: 16pt;
     }
     
     .flex-item-right, .flex-item-left {
         flex: 100%;
-    }
-    .col-skills {
-
     }
     .img-skills {
         max-width: 80%;
