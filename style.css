@@ -64,14 +64,19 @@ h1 {
 }
 
 #skills {
-    
+    text-align: center;
+    font-size: 14pt
 }
 
 .img-skills {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 160px;
+    width: 140px;
+}
+
+figcaption{
+    font-style: italic;
 }
 
 .row-skills {
@@ -82,7 +87,6 @@ h1 {
 
 .col-skills {
     flex: 25%;
-    padding-bottom: 0.5cm;
 }
 
 .img-portfolio {
@@ -105,6 +109,6 @@ h1 {
         padding-top: 0;
     }
     .img-skills {
-        max-width: 80%;
+        width: 130px;
     }
 }
