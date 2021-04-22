@@ -101,11 +101,11 @@ figcaption{
     /* For mobile phones: */
     body {
         max-width: 90%;
-        font-size: 16pt;
+        font-size: 14pt;
     }
     
     .flex-item-right, .flex-item-left {
-        flex: 100%;
+        flex: 50%;
         padding-top: 0;
     }
     .img-skills {
