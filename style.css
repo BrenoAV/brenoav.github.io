@@ -1,0 +1,29 @@
+h1#title {
+    font-size: 48px;
+    text-align: center;
+}
+
+img#profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 50%;
+}
+
+body {
+    max-width: 50%;
+    margin: auto;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+
+  img#profile {
+    width: 50%;
+  }
+
+  body {
+    max-width: 95%; 
+  }
+}
