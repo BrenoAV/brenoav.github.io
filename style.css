@@ -11,6 +11,13 @@
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Adjust the hover text shadow effect */
 }
 
+#job-title {
+    font-size: 28px; /* Adjust the font size as needed */
+    color: rgb(47, 255, 68);
+    text-align: center; /* Center the text */
+    font-family: 'Fira Code', monospace; /* Choose your desired font-family */
+}
+
 .bullet-list {
   padding-left: 30px;
 }
@@ -58,12 +65,7 @@ a:visited {
   color: #333333; /* Dark Gray text on green background */
 }
 
-#job-title {
-    font-size: 28px; /* Adjust the font size as needed */
-    color: rgb(47, 255, 68);
-    text-align: center; /* Center the text */
-    font-family: 'Fira Code', monospace; /* Choose your desired font-family */
-}
+
 
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 800px) {
