@@ -25,6 +25,7 @@ nav a {
   display: block;
   color: #fafafa;
   text-align: center;
+  font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -66,6 +67,11 @@ nav a:visited {
   /* Center the text */
   font-family: 'Fira Code', monospace;
   /* Choose your desired font-family */
+}
+
+#links {
+  font-size: 20px;
+  padding-top: 5px;
 }
 
 .bullet-list {
