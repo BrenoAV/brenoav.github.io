@@ -111,12 +111,12 @@ body {
 }
 
 a {
-  color: #4caf50;
+  color: #00FFFF;
   /* Choose your desired text color */
 }
 
 a:visited {
-  color: #3f7d41;
+  color: #FF00FF;
   /* Orange color for visited links */
 }
 
