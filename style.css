@@ -2,6 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Arrow below right */
+
 .totop {
   position: fixed;
   bottom: 10px;
@@ -16,7 +18,7 @@ html {
 }
 
 nav {
-  background-color: #0d671f;
+  background-color: #01204E;
   overflow: hidden;
 }
 
@@ -31,8 +33,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #1ec82f;
-  color: #080808;
+  background-color: #028391;
+  color: #fafafa;
 }
 
 nav a:visited {
@@ -43,26 +45,16 @@ nav a:visited {
 #title {
   font-size: 48px;
   /* Adjust the font size as needed */
-  color: #FF5722;
+  color: #01204E;
   text-align: center;
   /* Center the text */
   font-family: 'Fira Code', monospace;
-  /* Choose your desired font-family */
-  text-shadow: 2px 2px 4px #ffffff;
-  /* Text shadow effect */
-  transition: text-shadow 0.3s ease-in-out;
-  /* Smooth transition for the text shadow */
-}
-
-#title:hover {
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-  /* Adjust the hover text shadow effect */
 }
 
 #jobtitle {
-  font-size: 28px;
+  font-size: 24px;
   /* Adjust the font size as needed */
-  color: #FF5722;
+  color: #028391;
   text-align: center;
   /* Center the text */
   font-family: 'Fira Code', monospace;
@@ -81,12 +73,12 @@ nav a:visited {
 h2 {
   font-size: xx-large;
   text-indent: 0.1cm;
-  color: #ff9800;
+  color: #344C64;
 }
 
 h3 {
   text-indent: 0.2cm;
-  color: #db7777
+  color: #577B8D;
 }
 
 img#profile {
@@ -100,7 +92,7 @@ img#profile {
 body {
   font-family: "Source Code Pro", monospace;
   /* Choose your desired font-family */
-  background-color: "lightblue";
+  background-color: #F6EEC9;
   color: #333333;
   line-height: 1.5em;
   max-width: 70%;
@@ -112,11 +104,10 @@ body {
 
 a {
   color: #007BFF;
-  /* Choose your desired text color */
 }
 
 a:visited {
-  color: #FF00FF;
+  color: #007BFF;
 }
 
 .highlight {
