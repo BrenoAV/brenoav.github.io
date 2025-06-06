@@ -102,6 +102,37 @@ h3 {
   margin-top: 30px;
 }
 
+/* Publications */
+#publications {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+}
+
+#publications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#publications li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#publications li strong {
+    color: #1a5276;
+}
+
+#publications li em {
+    font-style: italic;
+    color: #666;
+}
+
+/* books section */
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -145,6 +176,80 @@ h3 {
 .scroll-top-btn:hover {
   background-color: #005f80;
 }
+
+/* Portfolio Styles */
+#portfolio {
+  background-color: #f9f9f9;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-details {
+  padding: 1rem;
+}
+
+.portfolio-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-details p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #555555;
+}
+
+.portfolio-details a {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.portfolio-details a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#portfolio h2 {
+  text-align: left;
+}
+
+/* Center just the image */
+.portfolio-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; /* or whatever size you prefer */
+  width: 100%;
+  height: auto;
+}
+
+
+
 
 /* Responsive Layout */
 @media (max-width: 600px) {
