@@ -110,7 +110,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #005f99;
   margin-top: 40px;
 }
@@ -118,7 +118,7 @@ h2 {
 h3 {
   font-size: 1.5rem;
   color: #007acc;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /* Publications */
@@ -226,6 +226,85 @@ h3 {
   background-color: #005f80;
 }
 
+/* events Styles */
+#events {
+  background-color: #f9f9f9;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.events-item {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+
+  /* Vertical blue bar */
+  border-left: 5px solid #007acc;
+  padding-left: 1rem; /* Ensures content doesn't overlap the bar */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align content to the left for better spacing */
+}
+
+
+.events-item:hover {
+  transform: translateY(-5px);
+}
+
+.events-details {
+  padding: 1rem;
+}
+
+.events-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.events-details p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #555555;
+}
+
+.events-details a {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.events-details a:hover {
+  text-decoration: underline;
+}
+
+
+#events h2 {
+  text-align: left;
+}
+
+/* Center just the image */
+.events-item img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  max-width: 200px; /* or whatever size you prefer */
+  width: 100%;
+  height: auto;
+}
+
+/* Portfolio section */
+
 /* Portfolio Styles */
 #portfolio {
   background-color: #f9f9f9;
@@ -249,13 +328,12 @@ h3 {
 
   /* Vertical blue bar */
   border-left: 5px solid #007acc;
-  padding-left: 1rem; /* Ensures content doesn't overlap the bar */
+  padding-left: 1rem;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left for better spacing */
+  align-items: flex-start; /* Left-align fields */
 }
-
 
 .portfolio-item:hover {
   transform: translateY(-5px);
@@ -263,52 +341,87 @@ h3 {
 
 .portfolio-details {
   padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
-.portfolio-details h3 {
+.portfolio-title {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #22223b;
 }
 
-.portfolio-details p {
-  font-size: 0.9rem;
+.portfolio-description {
+  font-size: 1rem;
+  color: #444;
+  background: #f5f7fa;
+  border-radius: 0.3rem;
+  padding: 0.5em 0.8em;
+  margin-bottom: 0.2em;
   line-height: 1.4;
-  margin-bottom: 1rem;
-  color: #555555;
+  width: fit-content;
+  max-width: 100%;
 }
 
-.portfolio-details a {
-  display: inline-block;
+.portfolio-tech {
+  font-size: 0.98rem;
+  background: #eaf6ff;
+  border-radius: 0.3rem;
+  padding: 0.4em 0.7em;
+  color: #26547c;
+  margin-bottom: 0.2em;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.tech-label {
+  font-weight: 600;
+  color: #007acc;
+  margin-right: 0.25em;
+}
+
+.portfolio-link {
+  display: inline;
   font-weight: 600;
   text-decoration: none;
-  color: #007bff;
+  color: #007acc;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  transition: color 0.18s;
+  cursor: pointer;
+  position: relative;
 }
 
-.portfolio-details a:hover {
+.portfolio-link::after {
+  content: " →";
+  font-size: 1.1em;
+  margin-left: 0.15em;
+  transition: margin-left 0.18s;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  color: #005fa3;
   text-decoration: underline;
 }
 
-.portfolio-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.portfolio-link:hover::after {
+  margin-left: 0.3em;
 }
 
 #portfolio h2 {
   text-align: left;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
-
-/* Center just the image */
-.portfolio-item img {
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px;
-  max-width: 200px; /* or whatever size you prefer */
-  width: 100%;
-  height: auto;
-}
-
-
 
 
 /* Responsive Layout */
