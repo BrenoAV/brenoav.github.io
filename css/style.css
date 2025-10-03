@@ -175,8 +175,7 @@ h3 {
   color: #666;
 }
 
-/* books section */
-
+/* Books Section */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -201,7 +200,7 @@ h3 {
   font-size: 1.0rem;
 }
 
-/* Scroll Button */
+/* Scroll Button - IMPROVED STYLE */
 .scroll-top-btn {
   position: fixed;
   bottom: 20px;
@@ -210,59 +209,92 @@ h3 {
   color: white;
   border: none;
   border-radius: 50%;
-  padding: 16px 20px;
-  font-size: 32px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  /* Use explicit width/height for a perfect circle and adjusted size */
+  width: 50px; 
+  height: 50px;
+  font-size: 1.5rem; /* Smaller, cleaner arrow */
+  /* Center the arrow vertically and horizontally */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Slightly stronger shadow for visibility */
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  line-height: 1;
-  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  line-height: 1; /* Reset line-height */
   z-index: 999;
-  max-width: calc(100vw - 40px);
-  overflow: hidden;
 }
 
 .scroll-top-btn:hover {
   background-color: #005f80;
+  transform: translateY(-2px); /* Subtle lift on hover */
 }
 
-/* events Styles */
-#events {
+
+/* ==================================== */
+/* Events and Portfolio Common Styles */
+/* ==================================== */
+
+#events, #portfolio {
   background-color: #f9f9f9;
 }
 
-.events-grid {
+.events-grid, .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 1.0rem; /* This sets the space between grid items */
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 20px; /* Re-added padding at the bottom of the grid */
 }
 
-.events-item {
+.events-item, .portfolio-item {
   background: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-
-  /* Vertical blue bar */
   border-left: 5px solid #007acc;
-  padding-left: 1rem; /* Ensures content doesn't overlap the bar */
+  /* Removed redundant item padding. Content padding is below. */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Align content to the left for better spacing */
+  align-items: flex-start; /* Ensure left alignment of content */
 }
 
-
-.events-item:hover {
+.events-item:hover, .portfolio-item:hover {
   transform: translateY(-5px);
 }
 
-.events-details {
-  padding: 1rem;
+.events-details, .portfolio-details {
+  /* top 1rem, right 2rem (for space), bottom 1rem, left 1rem */
+  padding: 1rem 2rem 1rem 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
+
+/* Technology Tag Styles (Used by both) */
+.portfolio-tech, .events-tech {
+  font-size: 0.98rem;
+  background: #eaf6ff;
+  border-radius: 0.3rem;
+  padding: 0.4em 0.7em;
+  color: #26547c;
+  margin-bottom: 0.2em;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.tech-label {
+  font-weight: 600;
+  color: #007acc;
+  margin-right: 0.25em;
+}
+
+/* ==================================== */
+/* Events Specific Styles */
+/* ==================================== */
 
 .events-details h3 {
   font-size: 1.25rem;
@@ -272,79 +304,17 @@ h3 {
 .events-details p {
   font-size: 0.9rem;
   line-height: 1.4;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   color: #555555;
 }
-
-.events-details a {
-  display: inline-block;
-  font-weight: 600;
-  text-decoration: none;
-  color: #007bff;
-}
-
-.events-details a:hover {
-  text-decoration: underline;
-}
-
 
 #events h2 {
   text-align: left;
 }
 
-/* Center just the image */
-.events-item img {
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px;
-  max-width: 200px; /* or whatever size you prefer */
-  width: 100%;
-  height: auto;
-}
-
-/* Portfolio section */
-
-/* Portfolio Styles */
-#portfolio {
-  background-color: #f9f9f9;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
-.portfolio-item {
-  background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-
-  /* Vertical blue bar */
-  border-left: 5px solid #007acc;
-  padding-left: 1rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Left-align fields */
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-}
-
-.portfolio-details {
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
+/* ==================================== */
+/* Portfolio Specific Styles (Now also used for Events link) */
+/* ==================================== */
 
 .portfolio-title {
   font-size: 1.25rem;
@@ -363,23 +333,6 @@ h3 {
   line-height: 1.4;
   width: fit-content;
   max-width: 100%;
-}
-
-.portfolio-tech {
-  font-size: 0.98rem;
-  background: #eaf6ff;
-  border-radius: 0.3rem;
-  padding: 0.4em 0.7em;
-  color: #26547c;
-  margin-bottom: 0.2em;
-  width: fit-content;
-  max-width: 100%;
-}
-
-.tech-label {
-  font-weight: 600;
-  color: #007acc;
-  margin-right: 0.25em;
 }
 
 .portfolio-link {
@@ -423,7 +376,7 @@ h3 {
 }
 
 .portfolio-gif img {
-    background-color: #fff;  /* or any color you like */
+    background-color: #fff;
     border-radius: 8px;
     display: block;
 }
@@ -444,4 +397,3 @@ h3 {
     align-items: center;
   }
 }
-
