@@ -390,43 +390,37 @@ h3 {
 }
 
 /* Code Blocks */
+/* Simple, clean code block styling */
 .highlight {
-  background: #f5f7fa;
-  border-radius: 6px;
+  background: #f6f8fa;         /* light neutral */
+  border-radius: 4px;
+  padding: 0.8em 1em;
   overflow-x: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin: 1.2rem 0;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.95rem;
-  max-width: 100%;
-  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  color: #24292e;              /* neutral dark text */
+  border: 1px solid #e1e4e8;   /* soft border for definition */
 }
 
+/* Remove any nested padding Rouge injects */
 .highlight pre,
 .highlight code {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.4;
   background: none;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
-p > code {
+/* Inline code */
+p > code,
+li > code {
   background: #f0f0f0;
   border-radius: 3px;
   padding: 0.2em 0.4em;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.95rem;
   color: #222;
-}
-
-code,
-pre,
-.highlight {
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.95rem;
-  color: #222;
-  white-space: pre-wrap;
-  word-break: break-word;
 }
 
 /* Responsive Layout */
