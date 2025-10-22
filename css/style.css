@@ -1,4 +1,25 @@
 /* Font and Global Reset */
+
+:root{
+  --ui-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  --body-size: 1.05rem;
+}
+
+body{
+  font-family: var(--ui-font);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  letter-spacing: 0.01em; /* subtle tightness */
+  background-color: #fafafa;
+  color: #e6eef6; /* optional: hacker-green/contrast if you want terminal vibe */
+}
+
+/* Optional: stronger "hacker" look for headings */
+h1,h2,h3{ font-weight:700; letter-spacing:0.02em; }
+
+/* Optional: enable nicer monospace for code blocks */
+code, pre { font-family: var(--ui-font); font-size: 0.95rem; }
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -28,7 +49,7 @@ img {
 
 h1 {
   font-size: 3.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .social-buttons {
@@ -109,10 +130,22 @@ h1 {
   padding: 20px;
 }
 
+.post-article {
+  margin-top: 1rem;
+}
+
+.post-body {
+  line-height: 1.7;
+}
+
+.post-body p {
+  margin-bottom: 1rem;
+}
+
 h2 {
   font-size: 2.2rem;
   color: #005f99;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 h3 {
@@ -381,6 +414,38 @@ h3 {
     display: block;
 }
 
+/* ==================================== */
+/* Code Blocks - Responsive and Styled  */
+/* ==================================== */
+
+pre {
+  background: #f5f7fa;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;  /* Enables horizontal scroll instead of overflow */
+  white-space: pre-wrap; /* Allows wrapping for long lines */
+  word-break: break-word; /* Wraps really long strings */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+  max-width: 100%; /* Prevents breaking the layout */
+}
+
+code {
+  background: #f5f7fa;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* Inline code inside paragraphs */
+p > code {
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+}
 
 /* Responsive Layout */
 @media (max-width: 600px) {

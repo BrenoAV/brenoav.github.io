@@ -1,5 +1,9 @@
-title: Breno Blog
-description: My personal blog
-baseurl: ""
+title: BrenoAV
+description: Personal website
+baseurl: ""   # important for user.github.io root
 url: "https://brenoav.github.io"
-theme: minima
+
+markdown: kramdown
+theme: null
+plugins: []
+

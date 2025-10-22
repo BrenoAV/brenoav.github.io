@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/#about' | relative_url }}">About</a>
+      <a href="{{ '/#publications' | relative_url }}">Publications</a>
+      <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
+      <a href="{{ '/#events' | relative_url }}">Events</a>
+      <a href="{{ '/#books' | relative_url }}">Books</a>
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+    </nav>
+
+
+    {{ content }}
+
+    <button onclick="scrollToTop()" class="scroll-top-btn">↑</button>
+    <script>
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
+
