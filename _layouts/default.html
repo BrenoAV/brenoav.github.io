@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body class="{{ page.layout }}">
     <!-- Navigation -->
     <nav class="navbar">
       <a href="{{ '/' | relative_url }}">Home</a>
@@ -10,9 +10,8 @@
       <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
       <a href="{{ '/#events' | relative_url }}">Events</a>
       <a href="{{ '/#books' | relative_url }}">Books</a>
-      <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/blog' | relative_url }}" class="nav-blog">Blog</a>
     </nav>
-
 
     {{ content }}
 
@@ -22,6 +21,18 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
-  </body>
+
+    {% if page.url contains '/blog' or page.layout == 'post' %}
+  <footer class="site-footer">
+    <p>
+      © {{ site.title }} — Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">
+        Creative Commons Attribution 4.0 International License
+      </a>
+      (reuse allowed with credit).
+    </p>
+  </footer>
+{% endif %}
+ </body>
 </html>
 
